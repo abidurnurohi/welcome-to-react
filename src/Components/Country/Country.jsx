@@ -1,9 +1,11 @@
 import React from 'react';
-
-const Country = () => {
+import './Country.css'
+const Country = ({country}) => {
     return (
-        <div>
-            <h2>Name: </h2>
+        <div className='country'>
+            <img src={country.flags.flags.png} alt="" />
+            <h2>Name: {country.name.common}</h2>
+            <p>Capital: {country.capital.capital}</p>
         </div>
     );
 };
